@@ -28,7 +28,16 @@ const inventors = [
   // 2. Map the array of the inventors into a new array containing objects with just the first and last names as properties
   // Hint:  Return a new object literal from the callback (don't mutate the object being passed in to map)
   
- 
+//   const inventorsNames = inventors.map(function(inventor) { 
+//     return ( inventor.first + " " + inventor.last) 
+//   });
+
+const inventorsNames = inventors.map(function(inventor) { 
+       return { first: inventor.first, last: inventor.last}
+   }); 
+   console.log(inventorsNames)
+
+
   // Array.prototype.sort()
   // 3. Sort the inventors by birth date (year property), in ascending order
   //To sort in the ascending order, we have to return a negative value 
